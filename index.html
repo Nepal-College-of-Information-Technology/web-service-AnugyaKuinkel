@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interior Design by Anugya - Transforming spaces with creativity and style">
+    <title>Interior Design by Anugya</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet for styles -->
+    <style>
+        /* Basic styling for the landing page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about, .services, .portfolio, .contact {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .service-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 10px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .portfolio-images img {
+            width: 100%;
+            max-width: 350px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Interior Design by Anugya</h1>
+        <p>Transforming Spaces with Creativity and Style</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Interior Design by Anugya is a premier design studio specializing in creating beautiful and functional spaces. Whether you're looking to redesign your home, office, or commercial space, Anugya brings unique style, functionality, and a deep understanding of design principles to every project.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul class="service-list">
+            <li>Residential Interior Design</li>
+            <li>Commercial Interior Design</li>
+            <li>Space Planning and Layout</li>
+            <li>Custom Furniture Design</li>
+            <li>Lighting and Color Consultation</li>
+            <li>Renovation and Remodeling</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-images">
+            <img src="portfolio-image1.jpg" alt="Interior Design Project 1">
+            <img src="portfolio-image2.jpg" alt="Interior Design Project 2">
+            <img src="portfolio-image3.jpg" alt="Interior Design Project 3">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Interior Design by Anugya. All Rights Reserved.</p>
+        <p>Follow us on social media: Instagram | Facebook | Pinterest</p>
+    </footer>
+
+</body>
+</html>
