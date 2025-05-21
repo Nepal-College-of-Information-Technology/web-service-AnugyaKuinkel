@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tour Nepal - Discover the Beauty</title>
+  <title>My Botanical Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Base Reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,247 +13,100 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fffaf4;
-      color: #333;
-    }
-
-    :root {
-      --pastel-green: #b9e4c9;
-      --pastel-blue: #bcdffb;
-      --pastel-pink: #fcd5ce;
-      --pastel-yellow: #fef9c7;
-      --dark: #2f3e46;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: var(--pastel-blue);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .navbar .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--dark);
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, var(--pastel-green), var(--pastel-blue));
-      padding: 6rem 2rem;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f6f5f3;
+      color: #2d2d2d;
       text-align: center;
-      color: black;
+      padding: 2rem;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #2b3a29;
     }
 
-    .hero p {
+    p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      color: #4f4f4f;
     }
 
-    .btn {
-      background-color: var(--pastel-pink);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      font-weight: bold;
-      color: #333;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #f8b8a9;
-    }
-
-    /* Highlights Section */
-    .highlights {
-      background-color: var(--pastel-yellow);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .highlights h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .cards {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background-color: white;
-      padding: 1.5rem;
+    .upload-section {
+      background-color: #fff;
+      border: 2px dashed #c5d9c4;
+      padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 280px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
-
-    /* Culture Section */
-    .culture {
-      padding: 4rem 2rem;
-      background-color: var(--pastel-pink);
-      text-align: center;
-    }
-
-    .culture h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .culture p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 4rem 2rem;
-      background-color: var(--pastel-blue);
-      text-align: center;
-    }
-
-    .contact h2 {
-      margin-bottom: 1.5rem;
-    }
-
-    form {
       max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      margin: 0 auto 2rem;
+      transition: all 0.3s ease;
     }
 
-    input, textarea {
-      padding: 0.75rem;
+    .upload-section:hover {
+      background-color: #f0f8f4;
+    }
+
+    input[type="file"] {
+      margin-top: 1rem;
+    }
+
+    #preview {
+      margin-top: 1.5rem;
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: none;
     }
 
     .footer {
-      background-color: #dfeef7;
-      padding: 1rem 2rem;
-      text-align: center;
-      color: #555;
+      margin-top: 4rem;
       font-size: 0.9rem;
+      color: #888;
     }
 
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Nepal Travels</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#highlights">Highlights</a></li>
-      <li><a href="#culture">Culture</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <h1>My Botanical Journal</h1>
+  <p>Capture your favorite plant moments and share your garden with the world 🌿</p>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Welcome to Nepal</h1>
-    <p>Discover the land of the Himalayas, ancient temples, and breathtaking landscapes.</p>
-    <a href="#highlights" class="btn">Explore Highlights</a>
-  </section>
+  <div class="upload-section">
+    <label for="imageUpload"><strong>Upload Your Plant Photo</strong></label><br>
+    <input type="file" id="imageUpload" accept="image/*">
+    <img id="preview" alt="Image Preview">
+  </div>
 
-  <!-- Highlights -->
-  <section id="highlights" class="highlights">
-    <h2>Scenic Highlights</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://via.placeholder.com/280x180?text=Everest" alt="Mount Everest">
-        <h3>Mount Everest</h3>
-        <p>The tallest peak in the world, Everest offers unmatched trekking experiences.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/280x180?text=Pokhara" alt="Pokhara">
-        <h3>Pokhara</h3>
-        <p>Serene lakes and mountain views make Pokhara a peaceful getaway.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/280x180?text=Lumbini" alt="Lumbini">
-        <h3>Lumbini</h3>
-        <p>The birthplace of Lord Buddha, a center of peace and spirituality.</p>
-      </div>
-    </div>
-  </section>
+  <div class="footer">
+    &copy; 2025 Botanical Journal · All rights reserved
+  </div>
 
-  <!-- Culture & Adventure -->
-  <section id="culture" class="culture">
-    <h2>Culture & Adventure</h2>
-    <p>Nepal is a melting pot of vibrant cultures, sacred temples, and adventurous treks. From traditional festivals to white-water rafting and paragliding, there's something for everyone who craves exploration and spiritual connection.</p>
-  </section>
+  <script>
+    const uploadInput = document.getElementById('imageUpload');
+    const preview = document.getElementById('preview');
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Plan Your Journey</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Message or inquiry..."></textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Nepal Travels. All rights reserved.
-  </footer>
+    uploadInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 
 </body>
 </html>
