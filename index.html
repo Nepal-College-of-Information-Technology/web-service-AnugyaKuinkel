@@ -40,12 +40,6 @@
       text-align: center;
       margin-top: 2em;
     }
-    .hero img {
-      max-width: 100px;
-      max-height:100px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
     .hero h2 {
       font-family: 'Brush Script MT', cursive;
       font-size: 2.5em;
@@ -58,16 +52,29 @@
       max-width: 600px;
       margin: 0 auto 2em;
     }
+    .content-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2em;
+      margin: 3em auto;
+      max-width: 1000px;
+      padding: 0 2em;
+    }
     .poem {
       font-family: 'Brush Script MT', cursive;
       font-size: 1.5em;
       color: #2e7d32;
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 500px;
       padding: 1em;
       background-color: rgba(255,255,255,0.6);
       border-radius: 15px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .bouquet-img {
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -83,23 +90,25 @@
   </nav>
 
   <div class="hero">
-    <img src="boquets.jpeg" alt="Beautiful Bouquet">
     <h2>Where Flowers Speak the Language of the Heart</h2>
     <p>At Petal Whispers, each bouquet is a handcrafted melody of colors and fragrances. Let our blooms tell your story with grace, beauty, and a whisper of charm.</p>
   </div>
 
-  <div class="poem">
-    <p>
-      In petals soft and colors bright,<br>
-      A gentle kiss of morning light.<br>
-      Through pastel dreams, the florals bloom,<br>
-      Replacing shadows, clearing gloom.<br><br>
+  <div class="content-section">
+    <div class="poem">
+      <p>
+        In petals soft and colors bright,<br>
+        A gentle kiss of morning light.<br>
+        Through pastel dreams, the florals bloom,<br>
+        Replacing shadows, clearing gloom.<br><br>
 
-      They speak of love with silent grace,<br>
-      A blushing smile on nature's face.<br>
-      So hold a bloom, inhale its art—<br>
-      It carries pieces of the heart.
-    </p>
+        They speak of love with silent grace,<br>
+        A blushing smile on nature's face.<br>
+        So hold a bloom, inhale its art—<br>
+        It carries pieces of the heart.
+      </p>
+    </div>
+    <img class="bouquet-img" src="/mnt/data/boquets.jpeg" alt="Beautiful Bouquet">
   </div>
 </body>
 </html>
