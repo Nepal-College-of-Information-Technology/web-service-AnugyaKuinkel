@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tourism in Nepal</title>
+  <title>Tour Nepal - Discover the Beauty</title>
   <style>
-    /* General Reset */
+    /* Base Reset */
     * {
       margin: 0;
       padding: 0;
@@ -14,26 +14,31 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fffaf4;
       color: #333;
     }
 
-    /* Matcha Theme Colors */
     :root {
-      --matcha: #a8c686;
-      --matcha-dark: #8cad69;
-      --text-dark: #222;
-      --light-bg: #f5f5f5;
+      --pastel-green: #b9e4c9;
+      --pastel-blue: #bcdffb;
+      --pastel-pink: #fcd5ce;
+      --pastel-yellow: #fef9c7;
+      --dark: #2f3e46;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     /* Navbar */
     .navbar {
-      background-color: var(--matcha-dark);
-      color: white;
+      background-color: var(--pastel-blue);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .navbar .logo {
@@ -44,115 +49,144 @@
     .nav-links {
       list-style: none;
       display: flex;
-    }
-
-    .nav-links li {
-      margin-left: 1.5rem;
+      gap: 1.5rem;
     }
 
     .nav-links a {
-      color: white;
-      text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      color: #222;
+      color: var(--dark);
     }
 
     /* Hero Section */
     .hero {
-      background-color: var(--matcha);
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: linear-gradient(135deg, var(--pastel-green), var(--pastel-blue));
+      padding: 6rem 2rem;
       text-align: center;
-      padding: 2rem;
+      color: black;
     }
 
-    .hero-content h1 {
+    .hero h1 {
       font-size: 3rem;
-      color: black;
       margin-bottom: 1rem;
     }
 
-    .hero-content p {
+    .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      color: #333;
     }
 
     .btn {
-      padding: 0.75rem 1.5rem;
-      background-color: var(--matcha-dark);
-      color: white;
-      text-decoration: none;
+      background-color: var(--pastel-pink);
       border: none;
-      border-radius: 5px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
       font-weight: bold;
+      color: #333;
       transition: background 0.3s;
     }
 
     .btn:hover {
-      background-color: #799c44;
+      background-color: #f8b8a9;
     }
 
-    /* Scenic Section */
-    .scenic-section {
+    /* Highlights Section */
+    .highlights {
+      background-color: var(--pastel-yellow);
       padding: 4rem 2rem;
-      background-color: white;
       text-align: center;
     }
 
-    .scenic-section h2 {
+    .highlights h2 {
       font-size: 2rem;
-      color: var(--text-dark);
       margin-bottom: 2rem;
     }
 
-    .gallery {
+    .cards {
       display: flex;
-      justify-content: center;
       gap: 2rem;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
-    .image-card {
-      background-color: var(--light-bg);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      width: 300px;
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
     }
 
-    .image-card img {
+    .card img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
-    .image-card p {
-      padding: 1rem;
-      font-weight: bold;
-      color: #444;
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
     }
 
-    /* Responsive */
+    /* Culture Section */
+    .culture {
+      padding: 4rem 2rem;
+      background-color: var(--pastel-pink);
+      text-align: center;
+    }
+
+    .culture h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .culture p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 2rem;
+      background-color: var(--pastel-blue);
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .footer {
+      background-color: #dfeef7;
+      padding: 1rem 2rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
     @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      .gallery {
+      .cards {
         flex-direction: column;
         align-items: center;
-      }
-
-      .hero-content h1 {
-        font-size: 2.2rem;
       }
     }
   </style>
@@ -164,40 +198,62 @@
     <div class="logo">Nepal Travels</div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Destinations</a></li>
-      <li><a href="#">Culture</a></li>
-      <li><a href="#">Adventures</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#culture">Culture</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Nepal</h1>
-      <p>Explore the land of the Himalayas, rich culture, and breathtaking beauty.</p>
-      <a href="#scenic" class="btn">Explore Now</a>
+    <h1>Welcome to Nepal</h1>
+    <p>Discover the land of the Himalayas, ancient temples, and breathtaking landscapes.</p>
+    <a href="#highlights" class="btn">Explore Highlights</a>
+  </section>
+
+  <!-- Highlights -->
+  <section id="highlights" class="highlights">
+    <h2>Scenic Highlights</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/280x180?text=Everest" alt="Mount Everest">
+        <h3>Mount Everest</h3>
+        <p>The tallest peak in the world, Everest offers unmatched trekking experiences.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/280x180?text=Pokhara" alt="Pokhara">
+        <h3>Pokhara</h3>
+        <p>Serene lakes and mountain views make Pokhara a peaceful getaway.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/280x180?text=Lumbini" alt="Lumbini">
+        <h3>Lumbini</h3>
+        <p>The birthplace of Lord Buddha, a center of peace and spirituality.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Scenic Beauty Section -->
-  <section id="scenic" class="scenic-section">
-    <h2>Scenic Beauty of Nepal</h2>
-    <div class="gallery">
-      <div class="image-card">
-        <img src="https://via.placeholder.com/300x200?text=Mount+Everest" alt="Mount Everest" />
-        <p>Mount Everest</p>
-      </div>
-      <div class="image-card">
-        <img src="https://via.placeholder.com/300x200?text=Pokhara+Lake" alt="Pokhara Lake" />
-        <p>Pokhara Lake</p>
-      </div>
-      <div class="image-card">
-        <img src="https://via.placeholder.com/300x200?text=Lumbini" alt="Lumbini" />
-        <p>Lumbini - Birthplace of Buddha</p>
-      </div>
-    </div>
+  <!-- Culture & Adventure -->
+  <section id="culture" class="culture">
+    <h2>Culture & Adventure</h2>
+    <p>Nepal is a melting pot of vibrant cultures, sacred temples, and adventurous treks. From traditional festivals to white-water rafting and paragliding, there's something for everyone who craves exploration and spiritual connection.</p>
   </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Plan Your Journey</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Message or inquiry..."></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Nepal Travels. All rights reserved.
+  </footer>
 
 </body>
 </html>
