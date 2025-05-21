@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in Nepal</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            color: #fff;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1579546928685-14552b4d1417?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Scenic Section */
+        .scenic-section {
+            padding: 4rem 2rem;
+            background-color: white;
+            text-align: center;
+        }
+
+        .scenic-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .image-card {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-card p {
+            padding: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Nepal Travels</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Adventures</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Nepal</h1>
+            <p>Explore the land of the Himalayas, rich culture, and breathtaking beauty.</p>
+            <a href="#scenic" class="btn">Explore Now</a>
+        </div>
+    </header>
+
+    <!-- Scenic Beauty Section -->
+    <section id="scenic" class="scenic-section">
+        <h2>Scenic Beauty of Nepal</h2>
+        <div class="gallery">
+            <div class="image-card">
+                <img src="https://via.placeholder.com/300x200?text=Mount+Everest" alt="Mount Everest">
+                <p>Mount Everest</p>
+            </div>
+            <div class="image-card">
+                <img src="https://via.placeholder.com/300x200?text=Pokhara+Lake" alt="Pokhara Lake">
+                <p>Pokhara Lake</p>
+            </div>
+            <div class="image-card">
+                <img src="https://via.placeholder.com/300x200?text=Lumbini" alt="Lumbini">
+                <p>Lumbini - Birthplace of Buddha</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
