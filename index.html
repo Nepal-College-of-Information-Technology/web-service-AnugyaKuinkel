@@ -1,112 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Botanical Journal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petal Whispers - Florist Boutique</title>
   <style>
-    * {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fce4ec, #e0f2f1);
+      color: #444;
+    }
+    nav {
+      background-color: #f8bbd0;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav h1 {
+      font-family: 'Brush Script MT', cursive;
+      color: #4a148c;
+      font-size: 2em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f6f5f3;
-      color: #2d2d2d;
+    nav ul li a {
+      text-decoration: none;
+      color: #4a148c;
+      font-weight: bold;
+    }
+    .hero {
       text-align: center;
-      padding: 2rem;
+      margin-top: 2em;
     }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      color: #2b3a29;
+    .hero img {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #4f4f4f;
+    .hero h2 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5em;
+      color: #6a1b9a;
+      margin: 1em 0 0.5em;
     }
-
-    .upload-section {
-      background-color: #fff;
-      border: 2px dashed #c5d9c4;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 500px;
-      margin: 0 auto 2rem;
-      transition: all 0.3s ease;
+    .hero p {
+      font-size: 1.1em;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 2em;
     }
-
-    .upload-section:hover {
-      background-color: #f0f8f4;
-    }
-
-    input[type="file"] {
-      margin-top: 1rem;
-    }
-
-    #preview {
-      margin-top: 1.5rem;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      display: none;
-    }
-
-    .footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+    .poem {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.5em;
+      color: #2e7d32;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: rgba(255,255,255,0.6);
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+  <nav>
+    <h1>Petal Whispers</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Bouquets</a></li>
+      <li><a href="#">Occasions</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-  <h1>My Botanical Journal</h1>
-  <p>Capture your favorite plant moments and share your garden with the world 🌿</p>
-
-  <div class="upload-section">
-    <label for="imageUpload"><strong>Upload Your Plant Photo</strong></label><br>
-    <input type="file" id="imageUpload" accept="image/*">
-    <img id="preview" alt="Image Preview">
+  <div class="hero">
+    <img src="/mnt/data/boquets.jpeg" alt="Beautiful Bouquet">
+    <h2>Where Flowers Speak the Language of the Heart</h2>
+    <p>At Petal Whispers, each bouquet is a handcrafted melody of colors and fragrances. Let our blooms tell your story with grace, beauty, and a whisper of charm.</p>
   </div>
 
-  <div class="footer">
-    &copy; 2025 Botanical Journal · All rights reserved
+  <div class="poem">
+    <p>
+      In petals soft and colors bright,<br>
+      A gentle kiss of morning light.<br>
+      Through pastel dreams, the florals bloom,<br>
+      Replacing shadows, clearing gloom.<br><br>
+
+      They speak of love with silent grace,<br>
+      A blushing smile on nature's face.<br>
+      So hold a bloom, inhale its art—<br>
+      It carries pieces of the heart.
+    </p>
   </div>
-
-  <script>
-    const uploadInput = document.getElementById('imageUpload');
-    const preview = document.getElementById('preview');
-
-    uploadInput.addEventListener('change', function () {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          preview.src = e.target.result;
-          preview.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
-
 </body>
 </html>
